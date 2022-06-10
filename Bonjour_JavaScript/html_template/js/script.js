@@ -6,12 +6,12 @@ function askName() {
 
 function askBirthYear() {
     var birthYear = window.prompt("En quelle année es-tu né.e ?", "1999")
-    birthYear = parseInt(birthYear)
-    var age = 2022 - birthYear
+    //birthYear = parseInt(birthYear)
+    var age = new Date().getFullYear() - birthYear
 
     var birthMonth = window.prompt("En quelle mois es-tu né.e ?", "3")
-    birthMonth = parseInt(birthMonth)
-    if (birthMonth > 6) {
+    //birthMonth = parseInt(birthMonth)
+    if (birthMonth > new Date().getMonth()) {
         age = age - 1
     }
     
